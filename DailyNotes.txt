@@ -1,0 +1,225 @@
+DAY-1:
+========
+
+JAVA:
+=====
+
+Language:
+==========
+English:communication purpose
+
+
+Programming Language:
+====================
+
+		  communication with machine
+		
+			
+		POP									OOP
+B,BCPL,C,COBOL,PHOTON..				c++,java,python,.net,lisp,smalltalk....OOPL
+			
+									OOPS
+	1)performance					1)performance :inheritance,polymorphisam
+	
+	2)security						2)secuirty	  :abstraction,encapsulation	
+
+
+WHY Java?/OAK
+
+Sun microsystem:james gosling
+
+1995
+
+
+	https://www.javatpoint.com/javafx-how-to-install-java
+
+
+	1)Platform Independent 
+	
+	2)Garbage Collection	useless	
+
+
+
+"Welcome to iversion"
+
+26 -->alphabets
+
+33 keywords-->python
+
+
+53 keywords--JAVA -->keywords in java lowercase 
+
+Welcome.java
+
+
+class Welcome
+{
+
+public static void main(String args[])
+{
+System.out.println("Welcome to iversion");
+
+}
+
+
+}
+compiler 
+
+.class
+
+JVM-->output 
+
+Platform Independent 
+
+	1 javaapp:windows,mac,linux....
+
+			oracle 						microsoft
+			
+			java:WORA					.net  (Platform dependent )windows
+
+											
+										linux
+
+
+
+
+100 1mb	:garbage collector  c,c++
+
+
+
+Identifiers:
+============
+		any name java will call it as identifier 
+
+	var name,class name,method name,interface name ,obj name
+
+		
+				a-z
+				A-Z
+				0-9
+				$,_
+
+
+
+Eclipse IDE 
+
+								JAVA
+								
+					JSE               JEE                 JME	
+corejava,awt,swings,applets..	servlet,jsp,spring....		Android	
+	java applications
+
+
+1)standalone /dekstop  		calculator/docx/excel/anti virus/media player...
+
+2)web app					gmail,facebook,insta.....URL's
+
+3)distributed app       		app1<-->app2 (webservices)
+
+4)mobile app               Android
+
+
+
+
+Variables:
+==========its name given to memory location
+
+		mobile contactnum
+		
+		
+			sandeep		54554545
+
+
+2 types 
+		local	:inside the method /block
+		global  :outside the method /block
+
+
+		syntax:datatype varname=value;
+
+							75.54576575756
+datatype:
+
+		PDT													NPDT
+byte		1 byte(8 bites)		-128 to 127							String,Arrays...
+short		2 bytes 		-32768 to 32767
+int 		4 bytes			-2147483648 to -2147483647
+long		8 bytes 		-2 power 63 to (2 power 63)-1
+
+float		4 bytes				float value=234.34f;
+double		8 bytes
+
+boolean	 	1 bit					true-1,false-0
+char  		2 bytes 				'M'
+
+						long	age=30;   8 
+							byte age=30;  1
+							
+							9494348734
+							
+	Instance and static:
+==========================	
+							
+	4 differences
+		
+					javac filename.java
+					java classname  JVM
+	
+	syntax:
+	
+	static int countryCode=123;
+		   int empId=222;
+	
+	
+	memory:
+		static variables/methods will get memory only once at the time of class loading into JVM .
+		instance variables/methods will get memory at the time of object creation.
+		local variables will get memory at the time of method execution
+	
+		class A
+		{
+		 int empId=222;//4 bytes
+		 
+		 main
+		 {
+		 //classname objref=new classname();
+			A a=new A();
+		 }
+		 
+		}
+	access:
+		static properties can be accessed by using classname 
+		instance properties can be accessed by using objref
+	
+	
+	usage:
+
+		static String orgname="iversion"
+		
+		eid,accno,phonenum,....instnace
+
+flow control/operators
+=======================
+
+if,else,for,dowhile,while,switch
+
+
+OOPS:
+=====
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+							
