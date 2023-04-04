@@ -203,9 +203,82 @@ flow control/operators
 
 if,else,for,dowhile,while,switch
 
+https://www.geeksforgeeks.org/operators-in-java/
 
-OOPS:
+	block with statements
+method syntax:
+=============
+public static void main(String[] args) 
+
+
+accessmodifier static/non-static returntype  methodname(params list) method signature
+{
+
+
+
+}
+
+package:
+==========
+
+
+
+//2 types packages
+
+//user defined 			pre defined --->import
+
+
+
+
+
+
+runtime data:
+==============
+java.util.Scanner 
+
+wrapperclasses
+
+
+OOPS:		OOPL
 =====
+	inheritance,polymorphisam		-->performance
+	
+	encapsulation,abstraction		-->secuirty
+
+
+Inheritance:	extends ,implements
+===========
+it is a process aquiring features form one class to another class 
+
+
+		class A
+		{
+		//20 methods
+		//10 variables
+		
+		}
+					//code reusability -->performance 
+
+		class B extends A
+		{
+		//10 methods
+		//5 variables
+		
+		
+		
+		}
+
+
+NOTE:
+=====
+1)for every java file bydefault package available :java.lang
+1)for every java class bydefault parent class :java.lang.Object
+
+
+
+
+
+
 
 
 
