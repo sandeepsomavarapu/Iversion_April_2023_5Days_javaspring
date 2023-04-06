@@ -236,7 +236,7 @@ runtime data:
 ==============
 java.util.Scanner 
 
-wrapperclasses
+wrapperclasses 8
 
 
 OOPS:		OOPL
@@ -250,7 +250,7 @@ Inheritance:	extends ,implements
 ===========
 it is a process aquiring features form one class to another class 
 
-
+CODE REUSABILITY
 		class A
 		{
 		//20 methods
@@ -271,8 +271,418 @@ it is a process aquiring features form one class to another class
 
 NOTE:
 =====
-1)for every java file bydefault package available :java.lang
-1)for every java class bydefault parent class :java.lang.Object
+1)for every java file by default package available :java.lang
+1)for every java class by default parent class :java.lang.Object -->11
+
+
+public   	:Every where we can access(with in package & outside package  )
+
+protected   :with in package every where but outside package when child
+
+private 	:class level scope
+
+default 	:package level scope
+
+instance and static method
+
+abstract method and concrete method
+
+
+
+public void m1()
+{
+
+
+}
+
+//concrete method /non abstract method
+
+
+public abstract void m1();//abstract
+
+
+
+Abstraction: HIDING THE IMPLEMENTATION BY SHOW CASING FUNCTIONALITIES
+
+			abstract class ,interface
+
+
+class:				class is a collection of only concrete methods
+
+abstract class:  abstractclass is a combination of both concrete and abstract methods 
+
+interface :		interface is a collection of only abstract methods  
+
+
+Multiple inheritance not  supported by java @class level
+
+
+Multiple inheritance   supported by java @interface level
+
+
+
+interface Parent              interface Parent1
+
+{							{
+
+	m1();					m1();
+}							}
+
+		
+
+class Child implements Parent,Parent1
+{
+main()
+{
+Child ch=new Child();
+ch.m1();//compiler
+
+
+
+}
+m1()
+{
+
+
+}
+
+
+}
+
+
+
+Polymorphisam:
+==============
+		many forms 
+		
+			method overloading
+			 method name is  same signature is different 
+									no of params
+									order of params
+									type of params 
+			
+			method overriding 
+				method name is same implementation is different 
+
+
+Encapsulation:
+==============
+	wrapping the data and methods together as a signle unit 
+
+
+string,arrays,collections,exception handling
+
+
+String,StringBuffer,StringBuilder: java.lang
+=================================
+		
+		"@qA90..."
+		
+
+
+
+Sting is immutable
+
+StringBuffer,StingBuilder -->mutable
+
+
+synchronized
+
+
+
+
+public void m1()
+{
+
+
+
+}
+
+public synchronized void m1()
+{
+
+
+
+}
+
+https://www.w3schools.com/java/java_ref_string.asp
+
+
+
+
+Exception Handling:
+=======================
+
+
+
+
+// 1.system defined error message 
+		// 2. abnormal termination
+		
+		//1.user friendly error messages
+		//2.normal termination
+
+try,catch,finally,throw,throws
+
+
+throw new exceptionclassname();
+
+throws
+	
+	Arrays:
+	======
+		1)Arrays are fixed in size 		AIOE  5-->7
+		
+		2)Arrays can hold only homogeneous/similar data 
+		
+		3)no utility methods
+		
+	
+		int a[]={12.3f,12,"sandeep"}//invalid
+	
+	
+	Collections:
+	===========
+			1)collections are not fixed in size /growable in nature .
+		
+			2)collections can store both homogeneous/heterogeneous data .
+	
+			3)lots of utility methods
+	
+	collection framework
+			List,Set,Queue,Map
+	
+		List:
+		======
+			1)Duplicates are allowed 
+			2)Insertion order preserved 
+	
+	
+	
+Spring Framework:
+==================
+	
+	spring NON-INVASIVE framework,which is used to create LIGHT WEIGHT & LOOSLEY COUPLED applications
+	
+	
+				hibernate,jpa,struts,jsf,ejb....
+	
+	
+			invasive : 	struts->implementation
+			
+			non-insaive :spring,hibernate-->
+	
+	
+	Servlet-->web applications,EJB
+
+class 
+	1)implements servlet 
+	
+	2)extends GenericServlet
+	
+	3)A extends HttpServlet  -->11
+	
+	
+	login ,register,home...
+
+100*11-->1100  heavy weight component
+
+heavy weight 
+
+
+	A extends HttpServlet
+	
+	
+	EJB
+	
+	Rod JOhnson-->interface21 -->spring --->1.x 2003
+	
+											5.x
+											6.x
+	
+	light weight components 
+	
+	
+	
+	tightly coupled 
+	Loosley coupled
+	
+	
+	spring :dependency injection container :BeanFactory & ApplicationContext
+	
+	class A1
+	{
+	
+	
+	}
+	
+			spring container-->BeanFactory,ApplicationContext 
+			
+		class B{
+		
+
+		
+		}
+	
+	spring modules
+		
+		SPRING CORE /Dependency injection module /IOC module 
+		spring jdbc
+		spring orm
+		spring mvc
+		spring web
+		spring aop
+		spring security
+		spring rest
+		....
+	
+	spring core :
+	=============
+	setter injection
+	constructor injection
+	autowiring -->injecting 
+	
+	
+	
+	life cycle of a object 
+		1)creation of object
+		2)configuring 
+		3)wiring 
+		4)destroying the object 
+	
+	BeanFactory,ApplicationContext
+	
+	
+	
+	A,B,C,,,......configuration file
+	
+	XML config		xmlfile 	 <beans><bean><property><constructor-arg> ref,class,id,autowire,scope...
+						annotation config user defined  annotations @COmponent,@COmponentScan,@Configuration@Autowired,@scope,@Component
+						java config
+						
+	Employee{
+	
+	
+	
+	}					springconfig.xml
+	
+	Client
+	{
+	main(){
+	BeanFactory--->sprigconfig.xml  --><beans> <bean> schema/dtd
+	getBean()
+	}
+	
+	}
+	
+	
+	JARS,maven
+	
+	
+	
+	
+	maven--->
+	
+	
+	  <bean class="com.iverson.springcore.Employee" id="emp">
+  
+  
+		</bean>  
+    
+    
+	
+	Employee emp=new Employee();
+	
+	Autowiring:
+	=============	injecting dependent object automatically
+	
+			byname,bytype
+			
+			
+			scope="prototype"/"singleton"
+			
+			
+			
+			Java config:
+			
+			
+			spring has given annotations for user defined classes but not for predefined classes 
+			
+						@Component/@Service/@Repository
+			
+			
+			Service Layer/business 
+			
+			dao/repository
+			
+			controller layer /ui layer 
+			
+			
+		@Bean  <bean><xml>
+			
+			
+			
+			
+			
+			
+			
+			https://dev.mysql.com/downloads/installer/
+			
+		install
+		mysql,oracle,db2,postgres,mongodb......
+		
+	Database mysql:
+	===================RDBMS
+	
+	
+	employee:id,name,sal,add,desg...tables-->rows and column
+	
+			
+	SQL
+	
+			DDL,DML,DRL
+	
+	
+	
+	DDl-->create,alter,drop,truncate,rename
+	
+	DML-->insert,update,delete
+	
+	DRL-->Select
+	
+	
+	
+create database iverson;
+use iverson;
+create table employees(eid int,ename varchar(15),esal int,edesg varchar(15));
+describe employees;
+alter table employees add address varchar(10);
+alter table employees drop column edesg;
+alter table employees change eid empno int;
+alter table employees rename to emps;
+alter table emps rename to employees;
+drop table employees;#delete entire table including data
+truncate table employees;#delete only data
+
+insert into employees values(123,'sandeep',9000,'trainer');
+insert into employees values(124,"naresh",40000,"developer");
+insert into employees values(125,"rajesh",50000,"admin");
+insert into employees values(126,"somesh",30000,"hr");
+insert into employees values(127,"suresh",35000,"developer");
+insert into employees values(128,"hitesh",45000,"trainer");
+insert into employees(eid,ename) values(129,'ifphang');
+select eid,ename from employees;
+
+update employees set esal=esal+5000 where edesg="developer";
+
+delete from employees where esal<10000;
+
+select * from employees where edesg="trainer";
+
+select max(esal) from employees;
+select min(esal) from employees;
+select avg(esal) from employees;
+select sum(esal) from employees;
 
 
 
@@ -280,19 +690,11 @@ NOTE:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
 	
 							
