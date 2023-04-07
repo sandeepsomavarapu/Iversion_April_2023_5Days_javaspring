@@ -556,8 +556,8 @@ heavy weight
 	
 	A,B,C,,,......configuration file
 	
-	XML config		xmlfile 	 <beans><bean><property><constructor-arg> ref,class,id,autowire,scope...
-						annotation config user defined  annotations @COmponent,@COmponentScan,@Configuration@Autowired,@scope,@Component
+						XML config	xmlfile 	 <beans><bean><property><constructor-arg> ref,class,id,autowire,scope...
+						annotation config user defined  annotations @COmponent,@COmponentScan,@Configuration@Autowired,@scope,@Component,@Qualifier
 						java config
 						
 	Employee{
@@ -596,7 +596,7 @@ heavy weight
 	Autowiring:
 	=============	injecting dependent object automatically
 	
-			byname,bytype
+			byname,bytype,constructor
 			
 			
 			scope="prototype"/"singleton"
@@ -608,12 +608,10 @@ heavy weight
 			
 			spring has given annotations for user defined classes but not for predefined classes 
 			
-						@Component/@Service/@Repository
-			
+						@Component/@Service/@Repository-->layered architecture 
+			dao/repository
 			
 			Service Layer/business 
-			
-			dao/repository
 			
 			controller layer /ui layer 
 			
@@ -686,15 +684,168 @@ select sum(esal) from employees;
 
 
 
+constraints:
+============
 
+#unique,notnull,check,pk,fk
+create table students(stuid int unique,stuname varchar(10) not null,stumarks int check(stumarks>500));
 
+insert into students values(1,"mahesh",550);
+insert into students values(2,"suresh",450);
+insert into students(stuname,stumarks) values("rajesh",650);
+select * from students;
 
+#PK=Unique+notnull
 
+create table students1(stuid int primary key,stuname varchar(10) not null,stumarks int check(stumarks>500));
+
+insert into students1 values(1,"mahesh",550);
+
+insert into students1(stuname,stumarks) values("rajesh",650);
+	
+	
+	java sunmicrosystem
+JDBC: API
+	
+			database  <----> JAVA App
+	
+					mysqlconnector.jar
+	.java 
+	
+	5 steps
+	
+	1)loading the driver class
+	
+	2)creating the connection
+	
+	3)creating the statement 
+	
+	4)executing query
+	
+	5)close the connection
+	
+	
+JPA	:java persistance api sun micro system
+
+		JPA-->JDBC
+
+	Jpa->specification
+	
+	ORM tools
+	
+			hibernate,ibatis,eclipselink,mybatis,toplink...
+	
+	
+	JPA-->hibernate
+	
+	
+	no querys
+	no table creation
+	no checked exceptions
+	no boiler plate code 
+	.....
+	
+	ORM-->object relational mapping 
+	
+	
+	Employee class 			------>employee Table
+	
+	id 						--->columns of table
+	name
+	salary
+	desg
+	
+	emp obj					--->row/record
 	
 	
 	
 	
+	EntityManagerFactory
+	
+	EntityManager 
+	
+			methods
+			
+				persist()-->insert
+				merge()	 -->update
+				remove() -->delete
+				find() -->	select
+				
+				DML-->transaction-->session
+	
+	
+			DML-->begin -->commit
+	
+	
+							createQuery()
+	
+	
+	@Entity
+	@Table(name="iverson_emps")
+	Employee               employee
+	
+	@Id -> PK
+	@Column(name="empid",length=10)
+	id 
+	name
+	salary
+	address
+	desg
 	
 	
 	
+	CLient
+	main
+		EntityManagerFactory
+		entityManager
+				persist()-->insert
+				merge()	 -->update
+				remove() -->delete
+				find() -->	select
+			
+	
+	
+	persistence.xml
+		Database properties
+			Driverclass
+			url
+			username
+			password
+			
+		hibernate properties
+
+			dialect class-->MysqlDialect
+			
+			show_sql-->true
+			
+			hbm2ddl.auto-->create/update 
+		
+		non-invasive
+	JPA jars + mysql jar
+	
+	
+	persistence.xml
+	
+	<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                      http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+  version="2.0">
+	<persistence-unit name="sleeping" transaction-type="RESOURCE_LOCAL">
+	
+		<properties>
+		<!-- database properties -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ktg" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="rpsconsulting" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			
+		<!--   hibernate properties  -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" /><!-- CREATE/UPDATE -->
+		
+		</properties>
+	</persistence-unit>
+</persistence>  
 							
